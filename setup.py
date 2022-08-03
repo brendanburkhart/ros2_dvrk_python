@@ -5,8 +5,7 @@ package_name = 'dvrk_python'
 setup(
     name=package_name,
     version='1.0.0',
-    packages=['dvrk'],
-    package_dir={'': 'src'},
+    packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
@@ -20,6 +19,7 @@ setup(
     license='MIT',
     entry_points={
         'console_scripts': [
+            'dvrk_arm_test = dvrk_python.dvrk_arm_test:main'
         ],
     },
 )

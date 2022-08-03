@@ -248,7 +248,7 @@ class example_application:
         self.run_servo_cp()
         self.run_move_cp()
 
-if __name__ == '__main__':
+def main():
     # ros init node so we can use default ros arguments (e.g. __ns:= for namespace)
     rclpy.init(args = sys.argv)
 
@@ -279,3 +279,8 @@ if __name__ == '__main__':
     rclpy.shutdown()
     executor_thread.join()
     node.destroy_node()
+
+
+if __name__ == '__main__':
+    main()
+
